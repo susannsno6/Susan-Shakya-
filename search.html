@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="	https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+<link rel="stylesheet" href="search.css">
+
+<body>
+<div class="container">
+
+<div class="search">
+    <i class="fa fa-search" aria-hidden="true"></i> <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search Products" title="Type in a name" >  
+</div>
+
+
+<ul id="myUL">
+  <li><a href="#">Neckless</a></li>
+  <li><a href="#">Ring</a></li>
+
+  <li><a href="#">breslate</a></li>
+  <li><a href="#">ear rings</a></li>
+
+  <li><a href="#">Calvin</a></li>
+  <li><a href="#">Christina</a></li>
+  <li><a href="#">Cindy</a></li>
+  <li><a href="#">Adele</a></li>
+  <li><a href="#">Agnes</a></li>
+
+  <li><a href="#">Billy</a></li>
+  <li><a href="#">Bob</a></li>
+
+  <li><a href="#">Calvin</a></li>
+  <li><a href="#">Christina</a></li>
+  <li><a href="#">Cindy</a></li>
+  <li><a href="#">Adele</a></li>
+  <li><a href="#">Agnes</a></li>
+
+  <li><a href="#">Billy</a></li>
+  <li><a href="#">Bob</a></li>
+
+  <li><a href="#">Calvin</a></li>
+  <li><a href="product-detail.html">American Dimond Neckless</a></li>
+  <li><a href="#">Cindy</a></li>
+</ul>
+</div>
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
